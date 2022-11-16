@@ -1,0 +1,72 @@
+.custom_container {
+  max-width: 100%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.main_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+text_container {
+  width: 60%;
+}
+img_container {
+  width: 35%;
+  justify-content: end;
+}
+#home_img {
+  width: 90%;
+}
+.home_main {
+  font-size: 10rem;
+  font-family: sans-serif;
+}
+.home_small {
+  font-size: 1.5rem;
+}
+.home_xsmall {
+  text-align: center;
+  font-size: 1rem;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
