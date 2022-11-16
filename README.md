@@ -2,9 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
 
+## Installation of Angular
+For windows, open up a terminal window and then run `npm install -g @angular/cli `
+Set your permissions globally using `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned` in order to run the server.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
 
 ## Code scaffolding
 
