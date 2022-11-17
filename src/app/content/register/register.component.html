@@ -1,17 +1,28 @@
-<div class="login_container">
-  <h1>LOGIN</h1>
-  <h4><i class="fa-brands fa-speakap mx-1"></i> SURVELLO</h4>
-  <p>Please login to customise your surveys</p>
+<div class="register_container">
+  <h1>REGISTER</h1>
+
+  <h4><i class="fa-brands fa-speakap mx-1"></i>SURVELLO</h4>
+  <p>Create your account</p>
 
   <form id="loginForm" novalidate>
     <input
       class="input_text"
       type="text"
-      id="username"
-      name="username"
+      id="fname"
+      name="fname"
       required
       value=""
-      placeholder="Enter your username..."
+      placeholder="Enter your full name..."
+    /><br />
+
+    <input
+      class="input_text"
+      type="email"
+      id="email"
+      name="email"
+      required
+      value=""
+      placeholder="Enter your email..."
     /><br />
     <input
       class="input_text"
@@ -25,7 +36,7 @@
 
     <div class="login_btn">
       <button id="loginButton" class="btn btn-primary btn-sm login_btn">
-        <i class="fas fa-sign-in-alt"></i>Login
+        <i class="fas fa-sign-in-alt"></i>Register
       </button>
       <button id="cancelButton" class="btn btn-warning btn-sm login_btn">
         <i class="fas fa-undo"></i>Cancel
@@ -33,7 +44,7 @@
     </div>
   </form>
   <p class="text-center text-muted small">
-    Don't have an account ?
-    <a class="link" href="#!">Register Here!</a>
+    Already have an account ?
+    <a class="link" href="#!">Login Here!</a>
   </p>
 </div>
