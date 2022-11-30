@@ -1,0 +1,33 @@
+<<<<<<< HEAD
+
+<div class="appInfo-cont">
+  <h1>About the App</h1>
+  <p>Survello is an application made for COMP229</p>
+  <p>Survello provides users with the opportunity to multiple surveys. If a user is logged in, it allows the creation of surveys if a user is logged.
+  <br/>If a user is not registered they will be directed to login and in the case of having no credentials, will be then directed to log in.
+  <br/> The surveys are connected to a database that is hosted on MongoAtlas. It is built using node, angular and the sweat and tears of its developers. </p>
+  
+</div>
+
+
+<div class="team-cont">
+  <h1 id="team_title">The Team</h1>
+  <div class="team-split">
+    <img id="jt_mug" src="../../../assets/images/mugshots/jtdiner.png" />
+    <img id="stroud_mug" src="../../../assets/images/mugshots/stroud.jpg" />
+    <img id="benton_mug" src="../../../assets/images/mugshots/unknown.jpg" />
+  </div>
+  <div class="team-split">
+    <img id="topzic_mug" src="../../../assets/images/mugshots/topzic.png" />
+    <img id="josh_mug" src="../../../assets/images/mugshots/josh.png" />
+  </div>
+
+</div>
+=======
+<p>
+  SURVELLO is a platform for users to create personalized surveys. The
+  users can choose existing templates for their survey structure and customise
+  it according to their own needs. We at survello strive to put forth a great service for all your survey needs
+  and we hope you enjoy our site.
+</p>
+>>>>>>> ec02712874257bbef387144880d1cdba131c5139
