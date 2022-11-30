@@ -17,27 +17,37 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page"
-            ><i class="fa-solid fa-circle-info"></i> About</a
-          >
+          <a class="nav-link active" routerLinkActive="active" href="/about" routerLink="/about" aria-current="page">
+            <i class="fa-solid fa-circle-info"></i> About
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page"
-            ><i class="fa-solid fa-table-list"></i> Surveys</a
-          >
+          <a class="nav-link active" routerLinkActive="active" href="/surveys" routerLink="/surveys" aria-current="page">
+            <i class="fa-solid fa-table-list"></i> Surveys
+          </a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page"
-            ><i class="fa-regular fa-user"></i> Login</a
-          >
-        </li>
+          <ng-container *ngIf="isLoggedIn else showLoginTemplate">
+            <li class="nav-item">
+              <a class="nav-link active" routerLinkActive="active" href="/logout" routerLink="/logout" aria-current="page">
+                <i class="fa-regular fa-user"></i> Logout
+              </a>
+            </li>
+          </ng-container>
+
+            <ng-template #showLoginTemplate>
+              <li class="nav-item">
+                <a class="nav-link active" routerLinkActive="active" href="/login" routerLink="/login" aria-current="page">
+                  <i class="fa-regular fa-user"></i> Login
+                </a>
+              </li>
+            </ng-template>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page"
-            ><i class="fa-regular fa-registered"></i> Register</a
-          >
+          <a class="nav-link active" routerLinkActive="active" href="/register" routerLink="/register" aria-current="page">
+            <i class="fa-regular fa-registered"></i> Register
+          </a>
         </li>
       </ul>
     </div>
