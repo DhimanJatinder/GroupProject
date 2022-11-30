@@ -1,0 +1,26 @@
+.appInfo-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+  }
+
+.team-cont{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+}
+.team-split{
+    display: flex;
+     gap: 40px;
+}
+
+
+img{
+    width: 300px;
+    height: 350px;
+}
