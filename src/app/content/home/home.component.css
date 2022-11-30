@@ -3,72 +3,123 @@
   margin: 2rem;
   display: flex;
   flex-direction: column;
+  animation: fadeInAnimation 3000ms;
 }
 
 .main_container {
-  width: 100%;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.btm_container{
+  text-align:center;
   display: flex;
   flex-direction: row;
-  align-self: center;
-}
-text_container {
-  width: 60%;
-}
-img_container {
-  width: 35%;
-  justify-content: end;
+  gap: 30px;
 }
 #home_img {
-  width: 90%;
-}
-.home_main {
-  font-size: 10rem;
-  font-family: sans-serif;
-}
-.home_small {
-  font-size: 1.5rem;
-}
-.home_xsmall {
-  text-align: center;
-  font-size: 1rem;
-}
-a:link {
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-}
-a:active {
-  text-decoration: none;
+ width: 50%;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ animation: fadeInAnimation 3000ms;
+
 }
 
-.animate-charcter {
-  text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
+button{
+  width: 186px;
+}
+
+@keyframes reveal {
+  80%{
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+    text-shadow: -10px -10px #D0BFAD;
+  }
+}
+
+@keyframes fadeInAnimation{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
+
+h1 {
+  background: 50% 100% / 50% 1% no-repeat radial-gradient(ellipse at bottom, black, transparent, transparent);
   background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
-  display: inline-block;
-  font-size: 190px;
+  color: transparent;
+  font-size: 10vw;
+  animation: reveal 3000ms ease-in-out forwards 400ms;
+
+  
+}  
+
+
+.button-56 {
+  align-items: center;
+  background-color: #D0BFAD;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-@keyframes textclip {
-  to {
-    background-position: 200% center;
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
   }
 }

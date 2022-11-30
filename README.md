@@ -9,6 +9,7 @@ Set your permissions globally using `Set-ExecutionPolicy -Scope CurrentUser -Exe
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+It will take a few moments for the page to start so be patient.
 
 
 ## Code scaffolding
