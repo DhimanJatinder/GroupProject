@@ -1,2 +1,2 @@
-export const MongoURI  = "mongodb+srv://topzic:nova2018@cluster0.ok50u6w.mongodb.net/?retryWrites=true&w=majority";
+export const MongoURI  = "mongodb+srv://ble21:yBwWrej9A5xkrqNj@comp229.ldmsa0l.mongodb.net/test?retryWrites=true&w=majority"
 export const Secret = "someSecret";
