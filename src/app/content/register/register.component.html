@@ -2,10 +2,19 @@
   <h1>REGISTER</h1>
 
   <h4><i class="fa-brands fa-speakap mx-1"></i>SURVELLO</h4>
+
   <p>Create your account</p>
 
-  <form id="loginForm" novalidate>
+  <div id="messageArea" *ngIf="isSignedUpFailed" class="alert alert-danger">
+      {{ errorMessage }}
+  </div>
+
+  <form #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" >
+
+    <div *ngIf="username.errors?.['required'] && f.submitted">First & Last Name is required</div>
     <input
+      [(ngModel)]="form.username"
+      #username="ngModel"
       class="input_text"
       type="text"
       id="fname"
@@ -15,7 +24,10 @@
       placeholder="Enter your full name..."
     /><br />
 
+    <div *ngIf="email.errors?.['required'] && f.submitted">Email is required</div>
     <input
+      [(ngModel)]="form.email"
+      #email="ngModel"
       class="input_text"
       type="email"
       id="email"
@@ -24,7 +36,11 @@
       value=""
       placeholder="Enter your email..."
     /><br />
+
+    <div *ngIf="password.errors?.['required'] && f.submitted">Password is required</div>
     <input
+      [(ngModel)]="form.password"
+      #password="ngModel"
       class="input_text"
       type="password"
       id="password"
@@ -32,6 +48,21 @@
       required
       value=""
       placeholder="Enter your password..."
+    />
+
+    <div *ngIf="confirmPassword.errors?.['required'] && f.submitted">Confirm Password is required</div>
+    <div *ngIf="confirmPassword.errors?.['pattern'] && f.submitted">Passwords do not match</div>
+    <input
+      [(ngModel)]="form.confirmPassword"
+      #confirmPassword="ngModel"
+      pattern="{{password.value}}"
+      class="input_text"
+      type="confirmpassword"
+      id="confirmpassword"
+      name="confirmpassword"
+      required
+      value=""
+      placeholder="Confirm your password..."
     />
 
     <div class="login_btn">

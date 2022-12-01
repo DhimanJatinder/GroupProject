@@ -3,25 +3,40 @@
   <h4><i class="fa-brands fa-speakap mx-1"></i> SURVELLO</h4>
   <p>Please login to customise your surveys</p>
 
-  <form id="loginForm" novalidate>
+  <div id="messageArea" class="alert alert-danger" *ngIf="isLoginFailed">
+    {{ errorMessage }}
+  </div>
+
+  <form id="loginForm" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" >
     <input
       class="input_text"
       type="text"
       id="username"
       name="username"
       required
+      [(ngModel)]="form.username" #username="ngModel"
       value=""
       placeholder="Enter your username..."
     /><br />
+
+    <div class="alert alert-danger" role="alert" *ngIf="username.errors?.['required'] && f.submitted">
+      Username is Required!
+    </div>
+
     <input
       class="input_text"
       type="password"
       id="password"
       name="password"
       required
+      [(ngModel)]="form.password" #password="ngModel" placeholder="Enter your password"
       value=""
       placeholder="Enter your password..."
     />
+
+    <div class="alert alert-danger" role="alert" *ngIf="password.errors?.['required'] && f.submitted">
+      Password is Required!
+    </div>
 
     <div class="button_area">
       <button id="loginButton" class="buttonl">

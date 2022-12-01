@@ -6,6 +6,16 @@ import { LoginComponent } from './content/login/login.component';
 import { RegisterComponent } from './content/register/register.component';
 import { SurveysComponent } from './content/surveys/surveys.component';
 
+// import mongoose from 'mongoose';
+// import {MongoURI, Secret} from '../config/config';
+
+// mongoose.connect(MongoURI);
+// const db = mongoose.connection;
+
+// //Listen for Connections or Errors
+// db.on('open', () => console.log(`Connected to MongoDB at Localhost`));
+// db.on('error', () => console.error('Connection Error'));
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
