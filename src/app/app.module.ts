@@ -10,6 +10,8 @@ import { AboutComponent } from './content/about/about.component';
 import { SurveysComponent } from './content/surveys/surveys.component';
 import { LoginComponent } from './content/login/login.component';
 import { RegisterComponent } from './content/register/register.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { RegisterComponent } from './content/register/register.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
