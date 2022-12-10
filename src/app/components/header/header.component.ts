@@ -4,22 +4,20 @@ import { TokenStorageService } from 'src/app/services/token-storage.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
-
 export class HeaderComponent implements OnInit {
-
   isLoggedIn = false;
   showSurveyList = false;
-  username? : string;
+  username?: string;
 
-  constructor(private tokenStorage: TokenStorageService) { }
+  constructor(private tokenStorage: TokenStorageService) {}
 
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorage.getToken();
 
-    if(this.isLoggedIn) {
-      const user:any = this.tokenStorage.getUserKey();
+    if (this.isLoggedIn) {
+      const user: any = this.tokenStorage.getUser();
       this.showSurveyList = true;
       this.username = user.username;
     }
@@ -29,6 +27,4 @@ export class HeaderComponent implements OnInit {
     this.tokenStorage.signOut();
     window.location.reload();
   }
-
 }
-

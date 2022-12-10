@@ -5,45 +5,38 @@ import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
-
   form: any = {
     username: null,
     email: null,
-    password: null
-  }
+    password: null,
+  };
 
   isSignedUpFailed = false;
-  errorMessage = "";
+  errorMessage = '';
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onSubmit() {
-    const {
-      username,
-      email,
-      password
-    } = this.form
-    
+    const { username, email, password } = this.form;
+
     this.authService.register(username, password, email).subscribe({
-      next: data => {
-        console.log(data)
+      next: (data) => {
+        console.log(data);
         this.isSignedUpFailed = false;
       },
-      error: err =>{
+      error: (err) => {
         this.errorMessage = err.error.errorMessage;
         this.isSignedUpFailed = true;
-      }
-    })
+      },
+    });
   }
 
-  goToHome() : void {
+  goToHome(): void {
     this.router.navigate(['/login']);
   }
-
 }

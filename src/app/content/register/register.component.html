@@ -6,12 +6,13 @@
   <p>Create your account</p>
 
   <div id="messageArea" *ngIf="isSignedUpFailed" class="alert alert-danger">
-      {{ errorMessage }}
+    {{ errorMessage }}
   </div>
 
-  <form #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" >
-
-    <div *ngIf="username.errors?.['required'] && f.submitted">First & Last Name is required</div>
+  <form #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()">
+    <div *ngIf="username.errors?.['required'] && f.submitted">
+      First & Last Name is required
+    </div>
     <input
       [(ngModel)]="form.username"
       #username="ngModel"
@@ -24,7 +25,9 @@
       placeholder="Enter your full name..."
     /><br />
 
-    <div *ngIf="email.errors?.['required'] && f.submitted">Email is required</div>
+    <div *ngIf="email.errors?.['required'] && f.submitted">
+      Email is required
+    </div>
     <input
       [(ngModel)]="form.email"
       #email="ngModel"
@@ -37,7 +40,9 @@
       placeholder="Enter your email..."
     /><br />
 
-    <div *ngIf="password.errors?.['required'] && f.submitted">Password is required</div>
+    <div *ngIf="password.errors?.['required'] && f.submitted">
+      Password is required
+    </div>
     <input
       [(ngModel)]="form.password"
       #password="ngModel"
@@ -50,12 +55,16 @@
       placeholder="Enter your password..."
     />
 
-    <div *ngIf="confirmPassword.errors?.['required'] && f.submitted">Confirm Password is required</div>
-    <div *ngIf="confirmPassword.errors?.['pattern'] && f.submitted">Passwords do not match</div>
+    <div *ngIf="confirmPassword.errors?.['required'] && f.submitted">
+      Confirm Password is required
+    </div>
+    <div *ngIf="confirmPassword.errors?.['pattern'] && f.submitted">
+      Passwords do not match
+    </div>
     <input
       [(ngModel)]="form.confirmPassword"
       #confirmPassword="ngModel"
-      pattern="{{password.value}}"
+      pattern="{{ password.value }}"
       class="input_text"
       type="confirmpassword"
       id="confirmpassword"

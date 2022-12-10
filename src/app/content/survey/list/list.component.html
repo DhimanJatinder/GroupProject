@@ -1,0 +1,58 @@
+<div class="container">
+  <h1>Survey List</h1>
+
+  <a
+    href="/surveys/add"
+    routerLink="/surveys/add"
+    *ngIf="isLoggedId"
+    class="btn btn-primary"
+    role="button"
+  >
+    <i class="fas fa-plus-circle"></i> Add a Movie</a
+  >
+
+  <div class="row">
+    <div class="col">
+      <table
+        *ngIf="!hasError"
+        class="table table-striped table-bordered table-hover"
+      >
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+
+            <th scope="col" *ngIf="isLoggedId"></th>
+            <th scope="col" *ngIf="isLoggedId"></th>
+          </tr>
+        </thead>
+        <tbody id="surveyList">
+          <!-- Repeatable Rows -->
+          <tr *ngFor="let survey of surveys">
+            <td>{{ survey["name"] }}</td>
+            <td>{{ survey["desc"] }}</td>
+
+            <td *ngIf="isLoggedId" class="text-center col-1">
+              <button
+                class="btn btn-primary btn-sm"
+                (click)="editSurvey(survey['_id'])"
+                class="btn btn-primary btn-sm"
+              >
+                <i class="fas fa-pencil-alt"></i> Edit
+              </button>
+            </td>
+
+            <td *ngIf="isLoggedId" class="text-center col-1">
+              <button
+                class="btn btn-danger btn-sm"
+                (click)="deleteSurvey(survey['_id'])"
+              >
+                <i class="fas fa-trash-alt"></i> Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

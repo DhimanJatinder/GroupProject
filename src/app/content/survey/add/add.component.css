@@ -1,0 +1,11 @@
+.survey_choices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.survey {
+  border: 1px solid white;
+  margin: 0.5rem;
+  padding: 2rem;
+  align-self: center;
+}

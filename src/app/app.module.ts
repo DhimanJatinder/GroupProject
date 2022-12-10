@@ -7,11 +7,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './content/home/home.component';
 import { AboutComponent } from './content/about/about.component';
-import { SurveysComponent } from './content/surveys/surveys.component';
+
 import { LoginComponent } from './content/login/login.component';
 import { RegisterComponent } from './content/register/register.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ListComponent } from './content/survey/list/list.component';
+import { EditComponent } from './content/survey/edit/edit.component';
+import { AddComponent } from './content/survey/add/add.component';
 
 @NgModule({
   declarations: [
@@ -20,17 +23,14 @@ import { HttpClientModule } from '@angular/common/http'
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    SurveysComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ListComponent,
+    EditComponent,
+    AddComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
